@@ -1175,7 +1175,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #f7403c;
+  background: #ff73ff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2249,11 +2249,6 @@ ul.breadcrumb li + li:last-child {
   padding: 20px 0;
   color: #fff;
   background-image: url("/images/blogHead.jpg");
-}
-@media (min-width: 992px) {
-  .site-meta {
-    background-image: url("/images/blogHead.jpg");
-  }
 }
 @media (max-width: 991px) {
   .site-meta {
