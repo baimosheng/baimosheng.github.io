@@ -1175,7 +1175,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ff73ff;
+  background: #ff0993;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2243,16 +2243,21 @@ ul.breadcrumb li + li:last-child {
   }
 }
 .site-brand-container {
-  position: relative;
+  background: #222;
+}
+@media (max-width: 991px) {
+  .site-brand-container {
+    box-shadow: 0 0 16px rgba(0,0,0,0.5);
+  }
 }
 .site-meta {
   padding: 20px 0;
   color: #fff;
   background-image: url("/images/blogHead.jpg");
 }
-@media (max-width: 991px) {
+@media (min-width: 992px) {
   .site-meta {
-    box-shadow: 0 0 16px rgba(0,0,0,0.5);
+    background-image: url("/images/blogHead.jpg");
   }
 }
 .brand {
