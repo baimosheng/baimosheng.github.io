@@ -217,6 +217,8 @@
             </span>
 
           
+  
+  
 
         </div>
       </header>
@@ -465,9 +467,57 @@
 
 
 
+
+<link rel="stylesheet" href="">
+
+<script>
+  NexT.utils.getScript('', () => {
+    var gitalk = new Gitalk({
+      clientID: 'fcc534001f6c675858c9',
+      clientSecret: '',
+      repo: 'BlogComment',
+      owner: 'baimosheng',
+      admin: ['baimosheng'],
+      id: 'f47af1d1eda4d807b02bba32be15120b',
+        language: '',
+      distractionFreeMode: 'true'
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+</script>
+
   
 
   
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'NFjpn1wkLm6Oxjjx0gLkC2Fy-gzGzoHsz',
+      appKey     : 'TaFMQiu14axIzNBp4yMptqwb',
+      placeholder: "Just go go",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
 
 </body>
 </html>
