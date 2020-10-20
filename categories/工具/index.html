@@ -391,23 +391,6 @@
 
 
 
-<link rel="stylesheet" href="">
-
-<script>
-  NexT.utils.getScript('', () => {
-    var gitalk = new Gitalk({
-      clientID: 'fcc534001f6c675858c9',
-      clientSecret: '',
-      repo: 'BlogComment',
-      owner: 'baimosheng',
-      admin: ['baimosheng'],
-      id: 'f47af1d1eda4d807b02bba32be15120b',
-        language: '',
-      distractionFreeMode: 'true'
-    });
-    gitalk.render('gitalk-container');
-  }, window.Gitalk);
-</script>
 
   
 
@@ -416,7 +399,7 @@
 
 <script>
 NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
-  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+  NexT.utils.getScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', () => {
     var GUEST = ['nick', 'mail', 'link'];
     var guest = 'nick,mail,link';
     guest = guest.split(',').filter(item => {
